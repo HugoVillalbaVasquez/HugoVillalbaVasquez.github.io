@@ -23,7 +23,7 @@ Al terminar mi educación media, me trasladé a Bogotá a estudiar primero en la
 
 Actualmente vivo en Bogotá y ocupo el cargo de gerente de tecnología de Hogarú, soy profesor de cátedra de microeconomía, economía laboral y macroeconomía en la Universidad de los Andes y estudio piano de manera aficionada.
 
-Me apasiona la música clásica, la literatura y el ciclismo. En esta página comparto pensamientos, noticias y reflexiones sobre mis intereses y pasiones ¡Bienvenidos!
+Me apasiona la música clásica, la literatura y el ciclismo. En esta página comparto pensamientos, noticias y reflexiones sobre mis intereses y pasiones.
 
 <!---
 Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
