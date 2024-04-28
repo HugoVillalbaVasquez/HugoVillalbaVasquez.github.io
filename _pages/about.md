@@ -9,7 +9,7 @@ profile:
   image: Foto_Hugo.png
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>Hugo Alberto Villalba Vásquez</p>  
+    <strong>Hugo Alberto Villalba Vásquez</strong>  
     <p>Ovejas, Sucre, Colombia</p>
     <p>Bogotá, Colombia</p>
 
