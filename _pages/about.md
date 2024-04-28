@@ -24,3 +24,5 @@ Al terminar mi educación media, me trasladé a Bogotá a estudiar primero en la
 Actualmente vivo en Bogotá y ocupo el cargo de gerente de tecnología de Hogarú, soy profesor de cátedra de microeconomía, economía laboral y macroeconomía en la Universidad de los Andes y estudio piano de manera aficionada.
 
 Me apasiona la música clásica, la literatura y el ciclismo. En esta página comparto pensamientos, noticias y reflexiones sobre mis intereses y pasiones.
+
+¡Bienvenidos!
