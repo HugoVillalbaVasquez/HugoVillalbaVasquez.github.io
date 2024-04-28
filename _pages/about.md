@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Melómano y lector.
+subtitle: <a href='#'>Affiliations</a>. Melomano y lector.
 
 profile:
   align: left
