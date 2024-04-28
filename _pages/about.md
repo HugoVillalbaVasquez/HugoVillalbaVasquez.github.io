@@ -6,7 +6,7 @@ subtitle: <a href='#'>Affiliations</a>. Melómano y lector.
 
 profile:
   align: right
-  image: Foto_Hugo.jpg
+  image: Foto_Hugo.png
   image_circular: false # crops the image to make it circular
   more_info: >
     <p> Ovejas, Sucre, Colombia</p>
