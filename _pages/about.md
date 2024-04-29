@@ -1,6 +1,6 @@
 ---
 layout: about
-title: biografía
+title: about
 permalink: /
 subtitle: <a href='#'>Affiliations</a>. Melómano y lector.
 
