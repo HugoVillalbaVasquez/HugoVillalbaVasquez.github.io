@@ -2,7 +2,7 @@
 layout: about
 title: biografía
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Melómano y lector.
+subtitle: <a href='#'>Iconoclasta</a>. Melómano y lector.
 
 profile:
   align: right
