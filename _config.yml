@@ -127,7 +127,7 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: Bitácora # blog_name will be displayed in your blog page
+blog_name: Soliloquio # blog_name will be displayed in your blog page
 blog_description: Aquí escribo sobre mis intereses y pasiones # a simple whitespace theme for academics
 permalink: /blog/:year/:title/
 
