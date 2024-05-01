@@ -18,7 +18,7 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Nací en [Ovejas](https://es.wikipedia.org/wiki/Ovejas_(Colombia)) el 20 de octubre de 1996. Soy hijo de Hugo Villalba y Margarita Vásquez y hermano de Bayron. Asistí a la Escuela María Montessori y a la Institución Educativa San José y tomé clases de violín en la Fundación Batuta en Sincelejo.
+Nací en [Ovejas](https://www.fundacionbatuta.org/) el 20 de octubre de 1996. Soy hijo de Hugo Villalba y Margarita Vásquez y hermano de Bayron. Asistí a la Escuela María Montessori y a la Institución Educativa San José y tomé clases de violín en la Fundación Batuta en Sincelejo.
 
 Al terminar mi educación media, me trasladé a Bogotá a estudiar primero en la Universidad Nacional de Colombia y luego en la Universidad de los Andes, de donde me gradué como físico y economista. Me interesa la cosmología, la macroeconomía y la generación de impacto social desde la industria tecnológica.
 
