@@ -180,3 +180,18 @@ p {
   padding: 4px 8px;
   border-radius: 6px;
 }
+
+.cv-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.cv-column h4 {
+  margin-bottom: 15px;
+}
+
+.cv-column p {
+  margin-bottom: 10px;
+}
