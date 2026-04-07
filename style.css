@@ -185,13 +185,23 @@ p {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
-  margin-top: 20px;
+  margin-top: 5px;
 }
 
 .cv-column h4 {
+  font-size: 16px;
   margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+  margin-top: 5px;
 }
 
 .cv-column p {
   margin-bottom: 10px;
+}
+
+@media (max-width: 700px) {
+  .cv-grid {
+    grid-template-columns: 1fr;
+  }
 }
