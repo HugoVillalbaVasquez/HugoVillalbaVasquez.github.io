@@ -236,3 +236,17 @@ p {
     grid-template-columns: 1fr;
   }
 }
+
+.about-header {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.about-header img {
+  width: 260px;
+  height: 260px;
+  border-radius: 12px; /* 🔥 cambia esto */
+  object-fit: cover;
+}
