@@ -11,10 +11,36 @@
   <div class="nav">
     <h1>Hugo Villalba</h1>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="cv.html">CV</a>
-      <a href="research.html">Research</a>
+      <a href="index.html">Home</a>      
+      <div class="dropdown">
+        <button class="dropdown-toggle">Bio ▾</button>
+          <div class="dropdown-menu">
+            <a href="about.html">About</a>
+            <a href="cv.html">CV</a>
+          </div>
+      </div>  
+      <div class="dropdown">
+        <button class="dropdown-toggle">Humanities ▾</button>
+          <div class="dropdown-menu">
+            <a href="literature.html">Literature</a>
+            <a href="music.html">Music</a>
+            <a href="philosophy.html">Philosophy</a>
+          </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropdown-toggle">Sciences ▾</button>
+          <div class="dropdown-menu">
+            <a href="physics.html">Physics</a>
+            <a href="economics.html">Economics</a>
+            <a href="history.html">History</a>
+          </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropdown-toggle">Business Administration ▾</button>
+          <div class="dropdown-menu">
+            <a href="leadership.html">Leadership</a>
+          </div>
+      </div>  
     </nav>
   </div>
 </header>
@@ -53,6 +79,28 @@
 
   <h3>Papers</h3>  
 </main>
-
 </body>
+<script>
+  const dropdowns = document.querySelectorAll(".dropdown");
+
+  dropdowns.forEach(dropdown => {
+    const toggle = dropdown.querySelector(".dropdown-toggle");
+
+    toggle.addEventListener("click", (e) => {
+      e.stopPropagation();
+
+      // cerrar otros dropdowns
+      dropdowns.forEach(d => {
+        if (d !== dropdown) d.classList.remove("open");
+      });
+
+      dropdown.classList.toggle("open");
+    });
+  });
+
+  // cerrar al hacer click afuera
+  document.addEventListener("click", () => {
+    dropdowns.forEach(d => d.classList.remove("open"));
+  });
+</script>
 </html>
