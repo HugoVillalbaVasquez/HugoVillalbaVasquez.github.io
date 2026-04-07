@@ -10,6 +10,11 @@ body {
 header {
   background: white;
   border-bottom: 1px solid #e5e5e5;
+
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 1000;
 }
 
 .nav {
@@ -264,4 +269,33 @@ p {
 
 .dropdown-menu a:hover {
   background: #f5f5f5;
+}
+
+nav a,
+.dropdown-toggle {
+  font-size: 14px;
+  color: #555;
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+}
+
+.dropdown-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+nav a:hover,
+.dropdown-toggle:hover {
+  color: black;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  
+  display: flex;
+  align-items: center;
+  gap: 25px;
 }

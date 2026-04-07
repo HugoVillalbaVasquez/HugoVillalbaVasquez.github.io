@@ -10,16 +10,21 @@
   <div class="nav">
     <h1>Hugo Villalba</h1>
     <nav>
+      <a href="index.html">Home</a>      
       <div class="dropdown">
-        <button class="dropdown-toggle">Home ▾</button>
+        <button class="dropdown-toggle">Bio ▾</button>
           <div class="dropdown-menu">
             <a href="about.html">About</a>
             <a href="cv.html">CV</a>
           </div>
       </div>  
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="cv.html">CV</a>
+      <div class="dropdown">
+        <button class="dropdown-toggle">Arts ▾</button>
+          <div class="dropdown-menu">
+            <a href="literature.html">Literature</a>
+            <a href="music.html">Music</a>
+          </div>
+      </div>
       <a href="literature.html">Literature</a>
       <a href="music.html">Music</a>
       <a href="economics.html">Economics</a>
@@ -68,18 +73,26 @@
 </main>
 
 <script>
-  const dropdown = document.querySelector(".dropdown");
-  const toggle = document.querySelector(".dropdown-toggle");
+  const dropdowns = document.querySelectorAll(".dropdown");
 
-  toggle.addEventListener("click", () => {
-    dropdown.classList.toggle("open");
+  dropdowns.forEach(dropdown => {
+    const toggle = dropdown.querySelector(".dropdown-toggle");
+
+    toggle.addEventListener("click", (e) => {
+      e.stopPropagation();
+
+      // cerrar otros dropdowns
+      dropdowns.forEach(d => {
+        if (d !== dropdown) d.classList.remove("open");
+      });
+
+      dropdown.classList.toggle("open");
+    });
   });
 
   // cerrar al hacer click afuera
-  document.addEventListener("click", (e) => {
-    if (!dropdown.contains(e.target)) {
-      dropdown.classList.remove("open");
-    }
+  document.addEventListener("click", () => {
+    dropdowns.forEach(d => d.classList.remove("open"));
   });
 </script>
 
