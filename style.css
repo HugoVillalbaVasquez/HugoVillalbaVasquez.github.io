@@ -1,19 +1,18 @@
+/* ===== BASE ===== */
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   margin: 0;
-  background-color: #f2f2f2;
+  background-color: #f7f7f7;
   color: #111;
   letter-spacing: -0.2px;
 }
 
-/* Header */
+/* ===== HEADER ===== */
 header {
-  background: white;
-  border-bottom: 1px solid #e5e5e5;
-
   position: sticky;
   top: 0;
   background: white;
+  border-bottom: 1px solid #e5e5e5;
   z-index: 1000;
 }
 
@@ -31,117 +30,100 @@ header {
   margin: 0;
 }
 
-/* Menu */
-nav a {
-  margin-left: 25px;
-  text-decoration: none;
-  color: #555;
-  font-size: 14px;
+/* ===== NAV ===== */
+nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
 }
 
-nav a:hover {
+nav a,
+.dropdown-toggle {
+  font-size: 14px;
+  color: #555;
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+}
+
+nav a:hover,
+.dropdown-toggle:hover {
   color: black;
 }
 
-/* Layout */
+/* ===== DROPDOWN ===== */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 35px;
+  left: 0;
+  min-width: 160px;
+
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 10px 0;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition: all 0.2s ease;
+
+  z-index: 2000;
+}
+
+.dropdown.open .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 15px;
+  color: #333;
+}
+
+.dropdown-menu a:hover {
+  background: #f5f5f5;
+}
+
+/* ===== LAYOUT ===== */
 main {
   max-width: 1000px;
   margin: 40px auto;
   padding: 0 20px;
 }
 
-/* Hero */
-.featured {
-  background: white;
-  padding: 40px;
-  border-radius: 12px;
-  margin-bottom: 50px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-}
-
-.featured h2 {
-  font-size: 36px;
-  line-height: 1.2;
-}
-
-/* Posts grid */
-.posts {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-}
-
-/* Card */
-.post {
-  background: white;
-  padding: 25px;
-  border-radius: 12px;
-  transition: 0.2s;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.post:hover {
-  transform: translateY(-5px);
-}
-
-.post h4 {
-  margin-top: 0;
-  font-size: 18px;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-.section-title {
-  margin-bottom: 20px;
-}
-
+/* ===== HERO ===== */
 .featured {
   position: relative;
-  border-radius: 12px;
   overflow: hidden;
-  margin-bottom: 50px;
-  margin-top: 20px;
+  border-radius: 12px;
+  margin: 20px 0 50px;
 }
 
 .featured img {
   width: 100%;
-  height: 400px;
+  height: 500px;
   object-fit: cover;
-  display: block;
-}
-
-.featured-content {
-  position: absolute;
-  bottom: 50px;
-  left: 50px;
-  color: rgb(255, 255, 255);
-  z-index: 2; /* 🔥 clave */
-  max-width: 600px;
-}
-
-.featured-content h2 {
-  font-size: 48px;
-  line-height: 1.1;
-  letter-spacing: -1.5px;
-  margin: 0;
 }
 
 .featured::after {
   content: "";
   position: absolute;
   inset: 0;
-  z-index: 1;
-
   background: linear-gradient(
     to top,
     rgba(0,0,0,0.7) 0%,
@@ -151,20 +133,20 @@ a:hover {
   );
 }
 
-h1 {
-  font-weight: 600;
+.featured-content {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  color: white;
+  z-index: 2;
+  max-width: 600px;
 }
 
-h2 {
-  font-weight: 700;
-}
-
-h3 {
-  font-weight: 600;
-}
-
-p {
-  font-weight: 300;
+.featured-content h2 {
+  font-size: 48px;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+  margin: 0;
 }
 
 .featured-content p {
@@ -186,6 +168,46 @@ p {
   border-radius: 6px;
 }
 
+/* ===== POSTS ===== */
+.posts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.post {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+  transition: all 0.25s ease;
+}
+
+.post:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+.post h4 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+/* ===== TEXT ===== */
+h1 { font-weight: 600; }
+h2 { font-weight: 700; }
+h3 { font-weight: 600; }
+
+p {
+  font-weight: 300;
+}
+
+/* ===== CV ===== */
 .cv-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -195,107 +217,22 @@ p {
 
 .cv-column h4 {
   font-size: 16px;
-  margin-bottom: 15px;
+  margin: 5px 0 15px;
   border-bottom: 1px solid #eee;
   padding-bottom: 5px;
-  margin-top: 5px;
 }
 
 .cv-column p {
-  margin-bottom: 10px;
+  margin: 0 0 10px;
 }
 
+/* ===== RESPONSIVE ===== */
 @media (max-width: 700px) {
+  .posts {
+    grid-template-columns: 1fr;
+  }
+
   .cv-grid {
     grid-template-columns: 1fr;
   }
-}
-
-/* DROPDOWN */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-/* BOTÓN */
-.dropdown-toggle {
-  background: none;
-  border: none;
-  font: inherit;
-  cursor: pointer;
-  color: #555;
-}
-
-.dropdown-toggle:hover {
-  color: black;
-}
-
-/* MENU */
-.dropdown-menu {
-  position: absolute;
-  top: 35px;
-  left: 0;
-
-  background: white;
-  border: 1px solid #eee;
-  border-radius: 8px;
-
-  min-width: 160px;
-  padding: 10px 0;
-
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-
-  opacity: 0;
-  transform: translateY(10px);
-  pointer-events: none;
-  transition: all 0.2s ease;
-
-  z-index: 1000;
-}
-
-/* ACTIVO */
-.dropdown.open .dropdown-menu {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
-}
-
-/* ITEMS */
-.dropdown-menu a {
-  display: block;
-  padding: 10px 15px;
-  color: #333;
-}
-
-.dropdown-menu a:hover {
-  background: #f5f5f5;
-}
-
-nav a,
-.dropdown-toggle {
-  font-size: 14px;
-  color: #555;
-  text-decoration: none;
-  font-family: 'Inter', sans-serif;
-}
-
-.dropdown-toggle {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-}
-
-nav a:hover,
-.dropdown-toggle:hover {
-  color: black;
-}
-
-nav {
-  display: flex;
-  align-items: center;
-  
-  display: flex;
-  align-items: center;
-  gap: 25px;
 }
