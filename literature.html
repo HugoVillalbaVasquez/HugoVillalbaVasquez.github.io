@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Literatura - Hugo Villalba</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">  
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<header>
+  <div class="nav">
+    <h1>Hugo Villalba</h1>
+    <nav>
+      <a href="index.html">Home</a>      
+      <div class="dropdown">
+        <button class="dropdown-toggle">Bio ▾</button>
+          <div class="dropdown-menu">
+            <a href="about.html">About</a>
+            <a href="cv.html">CV</a>
+          </div>
+      </div>  
+      <div class="dropdown">
+        <button class="dropdown-toggle">Humanities ▾</button>
+          <div class="dropdown-menu">
+            <a href="literature.html">Literature</a>
+            <a href="music.html">Music</a>
+            <a href="philosophy.html">Philosophy</a>
+          </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropdown-toggle">Sciences ▾</button>
+          <div class="dropdown-menu">
+            <a href="physics.html">Physics</a>
+            <a href="economics.html">Economics</a>
+            <a href="history.html">History</a>
+          </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropdown-toggle">Business Administration ▾</button>
+          <div class="dropdown-menu">
+            <a href="leadership.html">Leadership</a>
+          </div>
+      </div>  
+    </nav>
+  </div>
+</header>
+
+<main>
+  <h2>Literatura</h2>
+
+  <div class="articles">
+
+    <a href="articulo3.html" class="article">
+      <img src="./images/Seda_cover.jpeg" alt="Seda - Baricco">
+
+      <div class="article-content">
+        <div class="article-meta">Abril 2026 · 4 min</div>
+        <h3>Seda del fin del mundo</h3>
+        <p>Una lectura de Seda (1996) de Alessandro Baricco.</p>
+      </div>
+    </a>
+
+    <a href="articulo4.html" class="article">
+      <img src="./images/libro2.jpg" alt="Otro libro">
+
+      <div class="article-content">
+        <div class="article-meta">Marzo 2026 · 6 min read</div>
+        <h3>El arte de la brevedad</h3>
+        <p>Reflexiones sobre narrativa corta y estilo.</p>
+      </div>
+    </a>
+
+  </div>
+</main>
+
+<script>
+  const dropdowns = document.querySelectorAll(".dropdown");
+
+  dropdowns.forEach(dropdown => {
+    const toggle = dropdown.querySelector(".dropdown-toggle");
+
+    toggle.addEventListener("click", (e) => {
+      e.stopPropagation();
+
+      // cerrar otros dropdowns
+      dropdowns.forEach(d => {
+        if (d !== dropdown) d.classList.remove("open");
+      });
+
+      dropdown.classList.toggle("open");
+    });
+  });
+
+  // cerrar al hacer click afuera
+  document.addEventListener("click", () => {
+    dropdowns.forEach(d => d.classList.remove("open"));
+  });
+</script>
+
+<html>
