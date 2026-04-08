@@ -245,8 +245,19 @@ p {
 }
 
 .about-header img {
-  width: 260px;
-  height: 260px;
-  border-radius: 12px; /* 🔥 cambia esto */
+  width: 240px;
+  height: 240px;
+  border-radius: 12px;
   object-fit: cover;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.about-text {
+  max-width: 650px;
+}
+
+.about-text p {
+  margin-bottom: 12px;
+  line-height: 1.7;
 }
