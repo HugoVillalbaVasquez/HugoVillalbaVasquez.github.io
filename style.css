@@ -323,3 +323,17 @@ a:visited {
 a:hover {
   text-decoration: underline;
 }
+
+.tags {
+  margin: 8px 0;
+}
+
+.tags .tag {
+  display: inline-block;
+  font-size: 11px;
+  color: #666;
+  border: 1px solid #ddd;
+  padding: 3px 8px;
+  border-radius: 20px;
+  margin-right: 6px;
+}
