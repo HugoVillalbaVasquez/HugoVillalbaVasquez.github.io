@@ -310,3 +310,16 @@ p {
 .article:hover h3 {
   text-decoration: underline;
 }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:visited {
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: underline;
+}
